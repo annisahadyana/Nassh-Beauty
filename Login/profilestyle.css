@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300&family=Raleway:wght@100&display=swap");
+*,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat";
+  background-color: #ebe8e2;
+}
+
+.navbar {
+  position: fixed;
+  overflow: hidden;
+  top: 0%;
+  height: 70px;
+  width: 100%;
+  background-color: #ffffff;
+}
+h1 {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #000;
+  letter-spacing: 3px;
+}
+table {
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: large;
+  width: 100%;
+  border-spacing: 10px;
+}
+table tr {
+  height: 50px;
+}
+table tr td {
+  padding: 15px;
+  border-radius: 20px;
+}
+button {
+  float: right;
+  background: #555;
+  padding: 10px 15px;
+  color: #fff;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-top: 15px;
+  border: none;
+  width: 150px;
+}
+form input {
+  float: inline-start;
+  margin-left: 60px;
+  background: #555;
+  padding: 10px 15px;
+  color: #fff;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-top: 15px;
+  border: none;
+  width: 150px;
+}
+.logo {
+  line-height: 70px;
+  display: inline-block;
+  margin-left: 30px;
+  color: rgb(0, 0, 0);
+  letter-spacing: 1px;
+  font-family: "raleway";
+}
+
+.logo:hover {
+  color: #ca6850;
+}
+
+.navbar ul {
+  float: right;
+  margin-right: 40px;
+  list-style: none;
+}
+
+.navbar ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  display: block;
+  text-decoration: none;
+  font-weight: bolder;
+  font-family: "raleway";
+  color: rgb(0, 0, 0);
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+
+.navbar ul li a:hover {
+  color: #ca6850;
+}
+
+label #btn,
+label #close {
+  color: rbg(52, 50, 64);
+  font-size: 30px;
+  float: right;
+  margin-right: 40px;
+  line-height: 80px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+span#words {
+  font-family: "Medium 500";
+  color: white;
+  margin: 50px;
+  font-size: 25px;
+  letter-spacing: 3px;
+  font-style: italic;
+  padding-left: 40px;
+}
+
+.about-container {
+  background-color: #ebe8e2;
+  text-align: center;
+  height: 600px;
+}
+
+.about-title {
+  padding-top: 160px;
+  text-align: center;
+  line-height: 28px;
+  letter-spacing: 7px;
+  font-size: 50px;
+  font-family: "Times New Roman";
+}
+
+.about-title-indover {
+  padding-top: 140px;
+  text-align: center;
+  line-height: 28px;
+  letter-spacing: 5px;
+  font-size: 47px;
+  font-family: "Times New Roman";
+}
+
+hr {
+  width: 200px;
+  background-color: #ca6850;
+  margin: 15px auto;
+  height: 3px;
+  line-height: 1.45;
+  margin-bottom: 25px;
+  margin-top: 30px;
+}
+
+.about-text {
+  padding-left: 200px;
+  padding-right: 200px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 13px;
+  font-family: "Montserrat";
+  letter-spacing: 1px;
+}
+
+.indo-ver {
+  font-size: 10px;
+  font-style: italic;
+  padding-top: 10px;
+  text-align: center;
+  font-family: "Montserrat";
+}
+
+.about-text-indover {
+  text-decoration: none;
+  color: black;
+  padding-left: 190px;
+  padding-right: 190px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 13px;
+  font-family: "Montserrat";
+  letter-spacing: 1px;
+}
+
+.indo-ver a {
+  text-decoration: none;
+  color: black;
+}
+
+.indo-ver a:hover {
+  color: rgb(154, 101, 101);
+  font-weight: 900;
+}
+
+@media (max-width: 992px) {
+  label #btn {
+    display: block;
+  }
+  label #btn:hover {
+    color: rgb(154, 101, 101);
+  }
+  label #close:hover {
+    color: rgb(154, 101, 101);
+  }
+  .navbar ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    margin-right: 0;
+    right: -100%;
+    top: 70px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    transition: 0.5s;
+  }
+  .navbar ul li {
+    display: block;
+    line-height: 10px;
+    margin: 50px 0;
+  }
+  #check:checked ~ .navbar-menu {
+    right: 0;
+  }
+  #check:checked ~ label #btn {
+    display: none;
+  }
+  #check:checked ~ label #close {
+    display: block;
+  }
+  span#words {
+    font-size: 14px;
+  }
+  .about-container {
+    height: 750px;
+  }
+  .about-title {
+    padding-top: 90px;
+  }
+  .about-text {
+    text-align: center;
+    padding: 50px;
+    padding-top: 3px;
+    margin-bottom: -40px;
+  }
+  .about-text-indover {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

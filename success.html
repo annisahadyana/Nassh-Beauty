@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <!-- Fontawesome CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300&family=Raleway:wght@100&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat";
+      }
+
+      section {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background: #ebe8e2;
+      }
+
+      form input {
+        float: inline-start;
+        background: #ca6850;
+        padding: 10px 15px;
+        color: #fff;
+        border-radius: 5px;
+        margin-right: 10px;
+        margin-top: 15px;
+        border: none;
+        width: 150px;
+      }
+
+      form input:hover {
+        background: #ebe8e2;
+        color: #ca6850;
+        font-weight: 900;
+      }
+
+      button {
+        font-size: 18px;
+        font-weight: 400;
+        color: #fff;
+        padding: 14px 22px;
+        border: none;
+        background: #ca6850;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      .buttons a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      button:hover {
+        background-color: #ca6850;
+      }
+
+      button.show-modal,
+      .modal-box {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      section.active .show-modal {
+        display: none;
+      }
+
+      .overlay {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+      }
+
+      section.active .overlay {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .modal-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 380px;
+        width: 100%;
+        padding: 30px 20px;
+        border-radius: 24px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+
+      section.active .modal-box {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      .modal-box i {
+        font-size: 70px;
+        color: #ca6850;
+      }
+
+      .modal-box h2 {
+        margin-top: 20px;
+        font-size: 25px;
+        font-weight: 500;
+        color: #333;
+      }
+
+      .modal-box h3 {
+        font-size: 16px;
+        font-weight: 400;
+        color: #333;
+        text-align: center;
+        line-height: 30px;
+      }
+
+      .modal-box .buttons {
+        margin-top: 25px;
+      }
+
+      .modal-box button {
+        font-size: 14px;
+        padding: 6px 12px;
+        margin: 0 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <div class="modal-box">
+        <i class="fa-regular fa-circle-check"></i>
+        <h2 style="font-weight: bold">Successful!</h2>
+        <h3>Your order was successful, thank you!</h3>
+        <form action="index.html">
+          <input type="submit" value="Back to Home" />
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

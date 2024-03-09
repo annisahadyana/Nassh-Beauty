@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300&family=Raleway:wght@100&display=swap");
+h2 {
+  color: #ca6850;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  box-sizing: border-box;
+}
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form {
+  width: 90%;
+  max-width: 600px;
+}
+.input-group {
+  margin-bottom: 30px;
+  position: relative;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  border: 2px solid #ca6850;
+  color: #ca6850;
+  background: transparent;
+  font-size: 15px;
+}
+label {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  color: #ca6850;
+  cursor: text;
+  transition: 0.2s;
+}
+button {
+  padding: 10px 0;
+  color: #ca6850;
+  outline: none;
+  background: transparent;
+  border: 2px solid #ca6850;
+  width: 100%;
+  cursor: pointer;
+}
+button:hover {
+  padding: 10px 0;
+  color: #fafafa;
+  outline: none;
+  background: #ca6850;
+  border: 3px solid #ca6850;
+  width: 100%;
+  cursor: pointer;
+}
+input:focus ~ label,
+input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
+  top: -35px;
+  font-size: 14px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.row .input-group {
+  flex-basis: 48;
+}

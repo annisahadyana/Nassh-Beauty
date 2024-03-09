@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width-device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="js.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300&family=Raleway:wght@100&display=swap");
+      *,
+      html {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Montserrat";
+      }
+
+      .navbar {
+        overflow: hidden;
+        position: sticky;
+        top: 0%;
+        height: 70px;
+        width: 100%;
+        background-color: #ffffff;
+      }
+
+      .logo {
+        line-height: 70px;
+        display: inline-block;
+        margin-left: 30px;
+        color: #000000;
+        letter-spacing: 1px;
+        font-weight: bold;
+        font-family: "Montserrat";
+      }
+
+      .navbar ul {
+        float: right;
+        margin-right: 40px;
+        list-style: none;
+      }
+
+      .navbar ul li {
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 15px;
+      }
+
+      .navbar ul li a {
+        display: block;
+        text-decoration: none;
+        font-family: "Montserrat";
+        color: #000000;
+        letter-spacing: 2px;
+        font-size: 14px;
+      }
+
+      .navbar ul li a:hover,
+      .logo:hover {
+        color: #ca6850;
+        transition: 0.3s ease-in-out;
+      }
+
+      label #btn,
+      label #close {
+        color: rbg(52, 50, 64);
+        font-size: 30px;
+        float: right;
+        margin-right: 40px;
+        line-height: 80px;
+        cursor: pointer;
+        display: none;
+      }
+
+      #check {
+        display: none;
+      }
+
+      .about-us {
+        background-color: #f6f6f6;
+        padding-top: 10px;
+        margin-top: -60px;
+      }
+
+      section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 90vh;
+        width: 85vw;
+        margin: 0 auto;
+        font-family: "Playfair Display", serif;
+        display: grid;
+        align-content: center;
+        min-height: 100vh;
+      }
+
+      .image {
+        background: url("images/about.jpg") center/cover no-repeat;
+        width: 100%;
+        height: 100%;
+      }
+
+      .content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .h1-content {
+        letter-spacing: 5px;
+        color: black;
+        font-size: 35px;
+      }
+
+      .content span {
+        height: 2px;
+        width: 80px;
+        background: #ca6850;
+        margin: 30px 0;
+      }
+
+      .content p {
+        padding-bottom: 15px;
+        font-weight: 300;
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+        line-height: 1.7;
+        font-size: 15px;
+        letter-spacing: 2px;
+        color: #2a2c05;
+      }
+
+      .links {
+        margin: 15px 0;
+      }
+
+      .links li {
+        border: 0.5px solid #777;
+        list-style: none;
+        padding: 10px 15px;
+        width: 220px;
+        text-align: center;
+        letter-spacing: 2px;
+      }
+
+      .links li a {
+        text-transform: uppercase;
+        color: #777;
+        text-decoration: none;
+      }
+
+      .links li:hover {
+        border-color: #ca6850;
+      }
+
+      .links li:hover a {
+        color: #ca6850;
+      }
+
+      .vertical-line {
+        height: 30px;
+        width: 0.5px;
+        background: #777;
+        margin: 0 auto;
+      }
+
+      .icons {
+        display: flex;
+        padding: 15px 0;
+      }
+
+      .icons li {
+        display: block;
+        padding: 5px;
+        margin: 5px;
+      }
+
+      .icons li i {
+        font-size: 26px;
+        opacity: 0.8;
+      }
+
+      .icons li i:hover {
+        color: #ca6850;
+      }
+
+      .indover {
+        font-size: 10px;
+        text-decoration: none;
+        font-weight: 700;
+        color: #000000;
+        font-style: italic;
+        line-height: 50px;
+      }
+
+      .indover:hover {
+        font-weight: 1000;
+        color: #ca6850;
+      }
+
+      @media (max-width: 992px) {
+        label #btn {
+          display: block;
+        }
+        label #btn:hover {
+          color: #ca6850;
+        }
+        label #close:hover {
+          color: #ca6850;
+        }
+        .navbar ul {
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          margin-right: 0;
+          right: -100%;
+          top: 70px;
+          background-color: rgb(255, 255, 255);
+          text-align: center;
+          transition: 0.5s;
+        }
+        .navbar ul li {
+          display: block;
+          line-height: 10px;
+          margin: 50px 0;
+        }
+        #check:checked ~ .navbar-menu {
+          right: 0;
+        }
+        #check:checked ~ label #btn {
+          display: none;
+        }
+        #check:checked ~ label #close {
+          display: block;
+        }
+        .nassh h1 {
+          font-size: 30px;
+        }
+        span#words {
+          font-size: 14px;
+        }
+        section {
+          grid-template-columns: 1fr;
+          width: 100%;
+        }
+        .image {
+          padding-top: 0;
+          height: 90vh;
+          width: 90vh;
+          margin-left: 15px;
+          margin-right: 15px;
+        }
+        .content {
+          height: 100vh;
+        }
+        .content h2 {
+          font-size: 20px;
+          margin-top: 50px;
+        }
+        .content span {
+          margin: 20px 0;
+        }
+        .content p {
+          font-size: 14px;
+        }
+        .links li a {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--NAVBAR-->
+    <div class="navbar">
+      <input type="checkbox" id="check" />
+      <label for="check">
+        <i class="material-icons" id="btn">subject</i>
+        <i class="material-icons" id="close">close</i>
+      </label>
+      <a href="index.html">
+        <h2 class="logo">NASŚH BEAUTY</h2>
+      </a>
+      <ul class="navbar-menu">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about-us.html">ABOUT</a></li>
+        <li><a href="product.html">PRODUCT</a></li>
+        <li><a href="contact.php">CONTACT</a></li>
+        <li><a href="Login/index.php">LOGIN</a></li>
+      </ul>
+    </div>
+    <!--NAVBAR SELESAI-->
+
+    <div class="about-us" id="about-us">
+      <section>
+        <div class="image">
+          <!-- image here -->
+        </div>
+
+        <div class="content">
+          <h1 class="h1-content">TENTANG KAMI</h1>
+          <span><!-- line here --></span>
+
+          <p>
+            Naśsh Beauty: Inklusif. Premium. Membangkitkan semangat. Rayakan
+            keberagaman, ungkapkan diri Anda, dan capai hasil luar biasa dengan
+            kosmetik berkualitas tinggi kami. Gabunglah dengan komunitas
+            kecantikan kami dan rasakan perjalanan transformasi diri dan
+            kepercayaan diri.<br />
+            <a href="about-us.html" class="indover"
+              >Baca dalam: Bahasa Inggris</a
+            >
+          </p>
+
+          <ul class="links">
+            <li><a href="product.html">CEK PRODUK KAMI</a></li>
+          </ul>
+
+          <ul class="icons">
+            <li>
+              <i class="fa fa-instagram"></i>
+            </li>
+            <li>
+              <i class="fa fa-facebook"></i>
+            </li>
+            <li>
+              <i class="fa fa-twitter"></i>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <!--SCRIPT JAVASCRIPT-->
+    <script src="js.js"></script>
+    <!--SCRIPT JAVASCRIPT SELESAI-->
+  </body>
+</html>
